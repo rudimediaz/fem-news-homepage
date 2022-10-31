@@ -23,7 +23,7 @@ document.body.addEventListener("nav:toggled", function (ev) {
   if (ev.detail.navigationState === "expanded") {
     this.style.setProperty("overflow-y", "hidden");
   } else {
-    this.style.setProperty("overflow-y", "auto");
+    this.style.setProperty("overflow-y", "initial");
   }
 });
 
