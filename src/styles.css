@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Inter";
+    src: url(/assets/fonts/static/Inter-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url(/assets/fonts/static/Inter-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Inter ExtraBold";
+    src: url(/assets/fonts/static/Inter-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Inter Var";
+    src: url(/assets/fonts/Inter-VariableFont.ttf) format("truetype");
+}
+
 @layer std, comps, mods;
 
 :root {
@@ -152,12 +172,27 @@
 @layer mods {
     .heading {
         font-size: clamp(2.5rem, 3vw, 2.75rem);
-
+        font-family: "Inter ExtraBold";
         font-weight: 800;
     }
 
+    @supports (font-variation-settings: "wght" 800) {
+        .heading {
+            font-family: "Inter Var";
+            font-variation-settings: "wght" 800;
+        }
+    }
+
     .subtitle {
+        font-family: "Inter Bold";
         font-weight: 700;
+    }
+
+    @supports (font-variation-settings: "wght" 700) {
+        .subtitle {
+            font-family: "Inter Var";
+            font-variation-settings: "wght" 700;
+        }
     }
 
     .body-copy {
@@ -198,8 +233,16 @@
         background-color: var(--btn-shade);
         color: var(--btn-tint);
         outline: 1px solid var(--btn-shade);
+        font-family: "Inter Bold";
         font-weight: 700;
         display: block;
+    }
+
+    @supports (font-variation-settings: "wght" 700) {
+        .btn {
+            font-family: "Inter Var";
+            font-variation-settings: "wght" 700;
+        }
     }
 
     .btn:focus-visible {
@@ -235,7 +278,7 @@ nav {
 
 .nav-toggle {
     background-color: transparent;
-    background-image: url(/images/icon-menu.svg);
+    background-image: url(/assets/images/icon-menu.svg);
     padding-block: 0.5em;
     padding-inline: 1em;
     background-position: center;
@@ -245,7 +288,7 @@ nav {
 }
 
 .nav-toggle[aria-expanded="true"] {
-    background-image: url(/images/icon-menu-close.svg);
+    background-image: url(/assets/images/icon-menu-close.svg);
 }
 
 @media (min-width: 35em) {
@@ -452,7 +495,15 @@ nav {
 .card-topnews span {
     font-size: 2.5rem;
     color: var(--clr-n-2);
+    font-family: "Inter ExtraBold";
     font-weight: 800;
+}
+
+@supports (font-variation-settings: "wght" 800) {
+    .card-topnews span {
+        font-family: "Inter Var";
+        font-variation-settings: "wght" 800;
+    }
 }
 
 .card-topnews p {
