@@ -401,6 +401,7 @@ nav {
         grid-area: 1/1 / span 3 / 3;
         height: 100%;
         object-fit: cover;
+        object-position: top left;
     }
 
     .headline h2 {
