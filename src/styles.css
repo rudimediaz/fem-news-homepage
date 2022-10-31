@@ -2,13 +2,13 @@
 
 :root {
     --clr-p-hsl-1: 35 77% 62%;
-    --clr-p-hsl-2: 5 85% 63%;
+    --clr-p-hsl-2: 5 85% 43%;
 
     --clr-p-1: hsl(var(--clr-p-hsl-1));
     --clr-p-2: hsl(var(--clr-p-hsl-2));
 
     --clr-n-hsl-1: 36 100% 99%;
-    --clr-n-hsl-2: 233 8% 79%;
+    --clr-n-hsl-2: 233 8% 59%;
     --clr-n-hsl-3: 236 13% 42%;
     --clr-n-hsl-4: 240 100% 5%;
 
