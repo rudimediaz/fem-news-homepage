@@ -67,6 +67,7 @@
     body {
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
+        background-color: var(--clr-n-1);
     }
 }
 
@@ -263,6 +264,9 @@
 
 header {
     flex-direction: column;
+    position: sticky;
+    top : 0;
+    background-color: hsl(var(--clr-n-hsl-1) / 0.9);
 }
 
 nav {
@@ -279,16 +283,29 @@ nav {
 .nav-toggle {
     background-color: transparent;
     background-image: url(/assets/images/icon-menu.svg);
-    padding-block: 0.5em;
-    padding-inline: 1em;
+    width : 48px;
+    height: 48px;
+    margin : 0;
+    padding : 0;
+    display: inline-block;
+    background-size: 80% auto;
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
     z-index: 999;
+    border-radius: 50px;
+}
+
+.nav-toggle:active {
+    background-color: hsl(var(--clr-n-hsl-2) / 0.3);
+}
+
+.nav-toggle:focus-visible {
+    outline : 1px solid var(--clr-n-2);
 }
 
 .nav-toggle[aria-expanded="true"] {
     background-image: url(/assets/images/icon-menu-close.svg);
+    background-size: 50% auto;
 }
 
 @media (min-width: 35em) {
@@ -329,6 +346,12 @@ nav {
 .nav-top {
     gap: 1rem;
     background-color: var(--clr-n-1);
+}
+
+@media (width > 35em) {
+    .nav-top {
+        background-color: inherit;
+    }
 }
 
 @media (width < 35em) {
@@ -402,7 +425,7 @@ nav {
 }
 
 .headline-latest__list > div:not(:last-of-type) {
-    border-bottom: 1px solid var(--clr-n-1);
+    border-bottom: 1px solid var(--clr-n-2);
 }
 
 @supports selector(.headline-latest div:has(h3)) {
@@ -444,7 +467,7 @@ nav {
         grid-area: 1/1 / span 3 / 3;
         height: 100%;
         object-fit: cover;
-        object-position: top left;
+        object-position: center;
     }
 
     .headline h2 {
