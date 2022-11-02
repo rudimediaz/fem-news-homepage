@@ -68,6 +68,7 @@
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
         background-color: var(--clr-n-1);
+        color : var(--clr-n-3);
     }
 }
 
@@ -384,6 +385,10 @@ nav {
     gap: 2rem;
 }
 
+.headline h2 {
+    color : var(--clr-n-4);
+}
+
 .headline :is(picture, source, source) {
     display: contents;
 }
@@ -392,6 +397,7 @@ nav {
     width: 100%;
     object-fit: scale-down;
 }
+
 
 .headline__action a {
     padding-block: 0.75em;
@@ -502,6 +508,11 @@ nav {
 .card-topnews {
     column-gap: 1ch;
     row-gap: 0.5em;
+}
+
+
+.card-topnews h3 {
+    color : var(--clr-n-4);
 }
 
 .card-topnews > :is(span, h3) {
